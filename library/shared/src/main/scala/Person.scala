@@ -12,6 +12,4 @@ case class Person(
 object Person:
   given schema: Schema[Person] = Schema.derived[Person]
 
-  val codec = JsonCodec.jsonCodec(schema)
-
   val example: Person = Person(25, "Jeremy", "Guitard")
